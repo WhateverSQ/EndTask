@@ -14,3 +14,22 @@ void PrintArray(string[] array)
     }
     Console.WriteLine();
 }
+
+void FillSecondArray(string[] FirstArray, string[] SecondArray)
+{
+    int count = 0;
+    for (int i = 0; i < FirstArray.Length; i++)
+    {
+    if(FirstArray[i].Length <= 3)
+        {
+        SecondArray[count] = FirstArray[i];
+        count++;
+        }
+    }
+}
+
+System.Console.WriteLine("Start array: ");
+PrintArray(FirstArray);
+FillSecondArray(FirstArray, SecondArray);
+System.Console.WriteLine("Final array: ");
+PrintArray(SecondArray);
